@@ -12,9 +12,7 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-        <div class="oscars">
-            <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/oscars.png'; ?> " alt="recompense aux oscars">
-        </div>
+    <?php get_template_part( 'template-parts/oscars', 'none' ); ?>
         <ul>
             <li><a href="#">Mentions Légales</a></li>
             <li><a href="#">STUDIO KOUKAKI</a></li>
