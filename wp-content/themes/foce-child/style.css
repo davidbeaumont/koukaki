@@ -542,12 +542,41 @@ table {
   width: 100%;
 }
 
+@keyframes fade-in {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .site-footer {
   position: relative;
   display: flex;
   padding-top: 18em;
   padding-bottom: 1em;
   overflow: hidden;
+  animation: fade-in 1s ease-in-out forwards;
 }
 .site-footer::before {
   content: url("./assets/images/Sunflower.png");
@@ -692,6 +721,34 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+@keyframes fade-in {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .banner {
   background-image: url("./assets/images/banner.png");
   min-height: 806px;
@@ -701,8 +758,10 @@ textarea {
   align-items: center;
 }
 .banner img {
+  opacity: 0;
   margin-top: -10%;
   width: 50%;
+  animation: fade-in 1s ease-in-out forwards;
 }
 
 .story {
@@ -710,6 +769,7 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fade-in 1s ease-in-out forwards;
 }
 .story h2::before {
   content: url("./assets/images/sunflower_leaves.png");
@@ -743,9 +803,13 @@ textarea {
 }
 .story__article::after {
   content: url("./assets/images/Hibiscus.png");
+  animation: rotation 20s linear infinite;
   position: absolute;
   left: calc(50% + 414px);
   top: 2em;
+}
+.story__article p {
+  animation: fade-out 1s ease-in-out forwards;
 }
 .story #characters {
   margin: 6em;
@@ -788,11 +852,13 @@ textarea {
 }
 .story #place > div p {
   padding-left: 5em;
+  animation: fade-out 1s ease-in-out forwards;
 }
 
 #studio {
   position: relative;
   margin-top: 3em;
+  animation: fade-in 1s ease-in-out forwards;
 }
 #studio h2 {
   overflow: hidden;
@@ -824,6 +890,7 @@ textarea {
 }
 #studio > div p {
   width: 44.5%;
+  animation: fade-out 1s ease-in-out forwards;
 }
 
 @media all and (max-width: 1192px) {
@@ -1208,4 +1275,6 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

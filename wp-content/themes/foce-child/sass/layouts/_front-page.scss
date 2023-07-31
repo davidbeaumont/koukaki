@@ -1,3 +1,5 @@
+@import "../animations/animation.scss";
+
 .banner {
   background-image: url("./assets/images/banner.png");
   min-height: 806px;
@@ -5,9 +7,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  // animation: $animation-fade-out;
   img {
+    opacity: 0;
     margin-top: -10%;
     width: 50%;
+    animation: $animation-fade-in;
   }
 }
 
@@ -16,6 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: $animation-fade-in;
   h2{
     &::before {
       content: url('./assets/images/sunflower_leaves.png');
@@ -50,9 +56,13 @@
     }
     &::after {
       content: url('./assets/images/Hibiscus.png');
+      animation: $animation-rotation;
       position: absolute;
       left: calc(50% + 414px);
       top: 2em;
+    }
+    p {
+      animation: $animation-fade-out;
     }
   }
 
@@ -95,6 +105,7 @@
       margin-left: 6em;
       p {
         padding-left: 5em;
+        animation: $animation-fade-out;
       }
     }
   }
@@ -104,6 +115,7 @@
 #studio {
   position: relative;
   margin-top: 3em;
+  animation: $animation-fade-in;
   h2 {
     overflow: hidden;
     background-image: url("./assets/images/purple_studio_bg.png");
@@ -133,7 +145,8 @@
       top: 40%;
     }
     p{
-    width: 44.5%
+    width: 44.5%;
+    animation: $animation-fade-out;
     }
   }
 }
