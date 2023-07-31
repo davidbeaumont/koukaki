@@ -589,7 +589,8 @@ table {
 .site-footer {
   position: relative;
   display: flex;
-  padding-top: 18em;
+  flex-direction: column;
+  padding-top: 7em;
   padding-bottom: 1em;
   overflow: hidden;
   animation: fade-in 1s ease-in-out forwards;
@@ -607,6 +608,11 @@ table {
   position: absolute;
   right: -4em;
   bottom: 7.8em;
+}
+.site-footer .oscars {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 14em;
 }
 .site-footer ul {
   padding: 0;

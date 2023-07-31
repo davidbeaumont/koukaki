@@ -3,7 +3,8 @@
 .site-footer {
   position: relative;
   display: flex;
-  padding-top: 18em;
+  flex-direction: column;
+  padding-top: 7em;
   padding-bottom: 1em;
   overflow: hidden;
   animation: $animation-fade-in;
@@ -22,6 +23,11 @@
     right: -4em;
     bottom: 7.8em;
 
+  }
+  .oscars {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 14em;
   }
   ul{
     padding: 0;
