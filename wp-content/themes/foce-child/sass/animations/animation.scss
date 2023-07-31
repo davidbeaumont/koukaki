@@ -7,30 +7,54 @@
       transform: translateY(0);
       opacity: 1;
     }
-  }
-  $animation-fade-in: fade-in 1s ease-in-out forwards;
+}
+$animation-fade-in: fade-in 1s ease-in-out forwards;
 
   
 
-  @keyframes fade-out {
-    from {
-      transform: translateY(-200px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+@keyframes fade-out {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
   }
-  $animation-fade-out: fade-out 1s ease-in-out forwards;
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+$animation-fade-out: fade-out 1s ease-in-out forwards;
 
 
-  @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
   }
-  $animation-rotation: rotation 20s linear infinite;
+  to {
+    transform: rotate(360deg);
+  }
+}
+$animation-rotation: rotation 20s linear infinite;
+
+
+
+@keyframes scale {
+  from {
+    transform: scale(1.10);
+  }
+  to {
+    transform: scale(0.90);
+  }
+}
+$animation-scale: scale 5s ease-in-out alternate infinite;
+
+
+@keyframes translate {
+  from{
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-300px);
+  }
+}
+$animation-translate: translate 6s 2s ease-in-out alternate infinite;

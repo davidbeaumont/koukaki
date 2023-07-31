@@ -570,6 +570,22 @@ table {
     transform: rotate(360deg);
   }
 }
+@keyframes scale {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}
+@keyframes translate {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-300px);
+  }
+}
 .site-footer {
   position: relative;
   display: flex;
@@ -580,12 +596,14 @@ table {
 }
 .site-footer::before {
   content: url("./assets/images/Sunflower.png");
+  animation: rotation 20s linear infinite;
   position: absolute;
   left: 4em;
   top: 0em;
 }
 .site-footer::after {
   content: url("./assets/images/orchid.png");
+  animation: rotation 20s linear infinite;
   position: absolute;
   right: -4em;
   bottom: 7.8em;
@@ -606,6 +624,7 @@ table {
 }
 .site-footer ul::after {
   content: url("./assets/images/hibiscus_footer.png");
+  animation: rotation 20s linear infinite;
   position: absolute;
   left: calc(50% - 323px);
   bottom: -28.5em;
@@ -749,6 +768,22 @@ textarea {
     transform: rotate(360deg);
   }
 }
+@keyframes scale {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}
+@keyframes translate {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-300px);
+  }
+}
 .banner {
   background-image: url("./assets/images/banner.png");
   min-height: 806px;
@@ -780,6 +815,7 @@ textarea {
 }
 .story h2::after {
   content: url("./assets/images/Sunflower.png");
+  animation: rotation 20s linear infinite;
   position: absolute;
   left: 0.7em;
   top: 6em;
@@ -818,6 +854,7 @@ textarea {
 }
 .story #characters h3 {
   background-image: url("./assets/images/orange_characters_bg.png");
+  animation: scale 5s ease-in-out alternate infinite;
 }
 .story #characters div {
   flex: 1;
@@ -833,17 +870,19 @@ textarea {
 }
 .story #place {
   display: flex;
-  background-image: url("./assets/images/place_bg.png");
+  justify-content: space-around;
+  background-image: url("./assets/images/Studio_Koukaki-image_place.png");
   width: 100%;
   min-height: 699px;
   background-size: cover;
 }
 .story #place h3 {
   background-image: url("./assets/images/orange_place_bg.png");
+  animation: scale 5s ease-in-out alternate infinite;
   margin-bottom: -1em;
 }
 .story #place > div {
-  max-width: 580px;
+  max-width: 620px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -853,6 +892,15 @@ textarea {
 .story #place > div p {
   padding-left: 5em;
   animation: fade-out 1s ease-in-out forwards;
+}
+.story #place .blue-cloud {
+  display: flex;
+  background-image: url("./assets/images/clouds.png");
+  animation: translate 6s 2s ease-in-out alternate infinite;
+  margin-left: 100px;
+  width: 100%;
+  height: 304px;
+  margin: 30px 50px 0 0;
 }
 
 #studio {
@@ -866,12 +914,14 @@ textarea {
 }
 #studio h2::before {
   content: url("./assets/images/random_flower.png");
+  animation: rotation 20s linear infinite;
   position: absolute;
   left: -1em;
   top: 0;
 }
 #studio h2::after {
   content: url("./assets/images/flower.png");
+  animation: rotation 20s linear infinite;
   position: absolute;
   right: 1em;
   top: 1.2em;
