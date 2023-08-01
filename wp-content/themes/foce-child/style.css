@@ -586,6 +586,10 @@ table {
     transform: translateX(-300px);
   }
 }
+.animation-fade-in {
+  animation: fade-in 1s ease-in-out forwards;
+}
+
 .site-footer {
   position: relative;
   display: flex;
@@ -593,7 +597,6 @@ table {
   padding-top: 7em;
   padding-bottom: 1em;
   overflow: hidden;
-  animation: fade-in 1s ease-in-out forwards;
 }
 .site-footer::before {
   content: url("./assets/images/Sunflower.png");
@@ -790,6 +793,10 @@ textarea {
     transform: translateX(-300px);
   }
 }
+.animation-fade-in {
+  animation: fade-in 1s ease-in-out forwards;
+}
+
 .banner {
   background-image: url("./assets/images/banner.png");
   min-height: 806px;
@@ -802,7 +809,6 @@ textarea {
   opacity: 0;
   margin-top: -10%;
   width: 50%;
-  animation: fade-in 1s ease-in-out forwards;
 }
 
 .story {
