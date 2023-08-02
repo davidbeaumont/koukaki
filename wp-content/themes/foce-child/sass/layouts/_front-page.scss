@@ -4,14 +4,22 @@
   animation: $animation-translate;
 }
 
+.animation-fade-up {
+  animation: $animation-fade-up;
+}
+
+.animation-scale {
+  animation: $animation-scale;
+}    
+
+
 .banner {
-  background-image: url("./assets/images/banner.png");
+  // background-image: url("./assets/images/banner.png");
   min-height: 806px;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: -1;
   img {
     position: relative;
     margin-top: -10%;
@@ -22,6 +30,7 @@
 
 #background-video {
   position: absolute;
+  top: 48px;
 }
 
 .story {
@@ -29,21 +38,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: $animation-fade-in;
-  h2 {
+  animation: $animation-fade-up;
+  &__flower {
     &::before {
       content: url('./assets/images/sunflower_leaves.png');
       position: absolute;
       left: 0;
-      top: 1.8em;
+      top: 7.5em;
       z-index: -1;
     }
     &::after {
       content: url('./assets/images/Sunflower.png');
       animation: $animation-rotation;
       position: absolute;
-      left: 0.6em;
-      top: 6em;
+      left: 3em;
+      top: 26em;
+    }
+  }
+  &__flower2 {
+    &::before {
+      content: url('./assets/images/hibiscus_leaves.png');
+      position: absolute;
+      left: 52%;
+      top: 10em;
+      z-index: -1;
+    }
+    &::after {
+      content: url('./assets/images/Hibiscus.png');
+      animation: $animation-rotation;
+      position: absolute;
+      left: calc(52% + 414px);
+      top: 4em;
     }
   }
 
@@ -56,32 +81,16 @@
     font-size: 15px;
     padding-bottom: 2em;
     background-color: $color__background-body;
-    &::before {
-      content: url('./assets/images/hibiscus_leaves.png');
-      position: absolute;
-      left: 50%;
-      top: 8em;
-      z-index: -1;
-    }
-    &::after {
-      content: url('./assets/images/Hibiscus.png');
-      animation: $animation-rotation;
-      position: absolute;
-      left: calc(50% + 414px);
-      top: 2em;
-    }
-    p {
-      animation: $animation-fade-out;
-    }
+    animation: $animation-fade-down;
   }
 
   #characters {
     margin: 6em;
     display: flex;
     text-align: center;
+    animation: $animation-fade-up;
     h3 {
       background-image: url("./assets/images/orange_characters_bg.png");
-      animation: $animation-scale;
     }
     div {
       flex: 1
@@ -105,7 +114,6 @@
     background-size: cover;
     h3 {
       background-image: url("./assets/images/orange_place_bg.png");
-      animation: $animation-scale;
       margin-bottom: -1em;
     }
     > div {
@@ -117,7 +125,7 @@
       margin-left: 6em;
       p {
         padding-left: 5em;
-        animation: $animation-fade-out;
+        animation: $animation-fade-down;
       }
     }
     .blue-cloud {
@@ -135,40 +143,38 @@
 #studio {
   position: relative;
   margin-top: 3em;
-  animation: $animation-fade-in;
-  h2 {
-    overflow: hidden;
-    background-image: url("./assets/images/purple_studio_bg.png");
+  .studio__flower {
+    animation: $animation-fade-up;
     &::before {
       content: url('./assets/images/random_flower.png');
       animation: $animation-rotation;
       position: absolute;
-      left: -1em;
-      top: 0;
+      left: -5em;
+      top: -17em;
     }
     &::after {
       content: url('./assets/images/flower.png');
       animation: $animation-rotation;
       position: absolute;
       right: 1em;
-      top: 1.2em;
+      top: -10em;
     }
   }
-
-  > div {
+  > .studio__p {
     display: flex;
     justify-content: space-between;
     width: 66.66%;
     margin: auto;
     &::before {
       content: url('./assets/images/trple-leaf.png');
+      animation: $animation-fade-up;
       position: absolute;
       left: calc(50% - 17.225px);
       top: 40%;
     }
     p{
     width: 44.5%;
-    animation: $animation-fade-out;
+    //animation: $animation-fade-down;
     }
   }
 }

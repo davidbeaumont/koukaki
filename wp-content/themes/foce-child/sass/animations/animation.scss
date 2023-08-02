@@ -1,4 +1,4 @@
-@keyframes fade-in {
+@keyframes fade-up {
     from {
       transform: translateY(200px);
       opacity: 0;
@@ -11,11 +11,11 @@
       opacity: 1;
     }
 }
-$animation-fade-in: fade-in 2s ease-in-out forwards;
+$animation-fade-up: fade-up 2s ease-in-out forwards;
 
   
 
-@keyframes fade-out {
+@keyframes fade-down {
   from {
     transform: translateY(-200px);
     opacity: 0;
@@ -28,7 +28,7 @@ $animation-fade-in: fade-in 2s ease-in-out forwards;
     opacity: 1;
   }
 }
-$animation-fade-out: fade-out 2s ease-in-out forwards;
+$animation-fade-down: fade-down 2s ease-in-out forwards;
 
 
 
@@ -48,11 +48,14 @@ $animation-rotation: rotation 20s linear infinite;
   from {
     transform: scale(1);
   }
-  to {
+  50% {
     transform: scale(0.90);
   }
+  to {
+    transform: scale(1);
+  }
 }
-$animation-scale: scale 5s ease-in-out alternate infinite;
+$animation-scale: scale 5s 2s ease-in-out alternate;
 
 
 @keyframes translate {
