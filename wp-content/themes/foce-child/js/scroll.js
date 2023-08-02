@@ -1,15 +1,17 @@
-const observer = new IntersectionObserver(entries => {
+// effet sur le nuage
+
+const observerCloud = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      const square = entry.target.querySelector('img');
+      const translate = entry.target.querySelector('.blue-cloud');
   
       if (entry.isIntersecting) {
-        square.classList.add('animation-fade-in');
+        translate.classList.add('animation-translate');
         return; // if we added the class, exit the function
       }
   
       // We're not intersecting, so remove the class!
-      square.classList.remove('animation-fade-in');
+      translate.classList.remove('animation-translate');
     });
   });
   
-  observer.observe(document.querySelector('.banner'));
+  observerCloud.observe(document.querySelector('.watch'));

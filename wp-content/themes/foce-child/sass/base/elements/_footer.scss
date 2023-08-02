@@ -1,9 +1,5 @@
 @import "../../animations/animation.scss";
 
-.animation-fade-in {
-  animation: $animation-fade-in;
-}
-
 .site-footer {
   position: relative;
   display: flex;
@@ -11,6 +7,7 @@
   padding-top: 7em;
   padding-bottom: 1em;
   overflow: hidden;
+  animation: $animation-fade-in;
 
   &::before {
     content: url('./assets/images/Sunflower.png');

@@ -547,6 +547,9 @@ table {
     transform: translateY(200px);
     opacity: 0;
   }
+  80% {
+    opacity: 1;
+  }
   to {
     transform: translateY(0);
     opacity: 1;
@@ -556,6 +559,9 @@ table {
   from {
     transform: translateY(-200px);
     opacity: 0;
+  }
+  80% {
+    opacity: 1;
   }
   to {
     transform: translateY(0);
@@ -572,7 +578,7 @@ table {
 }
 @keyframes scale {
   from {
-    transform: scale(1.1);
+    transform: scale(1);
   }
   to {
     transform: scale(0.9);
@@ -582,14 +588,27 @@ table {
   from {
     transform: translateX(0);
   }
-  to {
+  50% {
     transform: translateX(-300px);
   }
+  to {
+    transform: translateX(0);
+  }
 }
-.animation-fade-in {
-  animation: fade-in 1s ease-in-out forwards;
+@keyframes flottement {
+  from {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(15px, 5px);
+  }
+  60% {
+    transform: translate(5px, 15px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
 }
-
 .site-footer {
   position: relative;
   display: flex;
@@ -597,6 +616,7 @@ table {
   padding-top: 7em;
   padding-bottom: 1em;
   overflow: hidden;
+  animation: fade-in 2s ease-in-out forwards;
 }
 .site-footer::before {
   content: url("./assets/images/Sunflower.png");
@@ -754,6 +774,9 @@ textarea {
     transform: translateY(200px);
     opacity: 0;
   }
+  80% {
+    opacity: 1;
+  }
   to {
     transform: translateY(0);
     opacity: 1;
@@ -763,6 +786,9 @@ textarea {
   from {
     transform: translateY(-200px);
     opacity: 0;
+  }
+  80% {
+    opacity: 1;
   }
   to {
     transform: translateY(0);
@@ -779,7 +805,7 @@ textarea {
 }
 @keyframes scale {
   from {
-    transform: scale(1.1);
+    transform: scale(1);
   }
   to {
     transform: scale(0.9);
@@ -789,12 +815,29 @@ textarea {
   from {
     transform: translateX(0);
   }
-  to {
+  50% {
     transform: translateX(-300px);
   }
+  to {
+    transform: translateX(0);
+  }
 }
-.animation-fade-in {
-  animation: fade-in 1s ease-in-out forwards;
+@keyframes flottement {
+  from {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(15px, 5px);
+  }
+  60% {
+    transform: translate(5px, 15px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+.animation-translate {
+  animation: translate 12s ease-in-out alternate;
 }
 
 .banner {
@@ -804,11 +847,17 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: -1;
 }
 .banner img {
-  opacity: 0;
+  position: relative;
   margin-top: -10%;
   width: 50%;
+  animation: flottement 3s linear alternate infinite;
+}
+
+#background-video {
+  position: absolute;
 }
 
 .story {
@@ -816,7 +865,7 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fade-in 1s ease-in-out forwards;
+  animation: fade-in 2s ease-in-out forwards;
 }
 .story h2::before {
   content: url("./assets/images/sunflower_leaves.png");
@@ -829,7 +878,7 @@ textarea {
   content: url("./assets/images/Sunflower.png");
   animation: rotation 20s linear infinite;
   position: absolute;
-  left: 0.7em;
+  left: 0.6em;
   top: 6em;
 }
 .story__article {
@@ -857,7 +906,7 @@ textarea {
   top: 2em;
 }
 .story__article p {
-  animation: fade-out 1s ease-in-out forwards;
+  animation: fade-out 2s ease-in-out forwards;
 }
 .story #characters {
   margin: 6em;
@@ -903,12 +952,11 @@ textarea {
 }
 .story #place > div p {
   padding-left: 5em;
-  animation: fade-out 1s ease-in-out forwards;
+  animation: fade-out 2s ease-in-out forwards;
 }
 .story #place .blue-cloud {
   display: flex;
   background-image: url("./assets/images/clouds.png");
-  animation: translate 6s 2s ease-in-out alternate infinite;
   margin-left: 100px;
   width: 100%;
   height: 304px;
@@ -918,7 +966,7 @@ textarea {
 #studio {
   position: relative;
   margin-top: 3em;
-  animation: fade-in 1s ease-in-out forwards;
+  animation: fade-in 2s ease-in-out forwards;
 }
 #studio h2 {
   overflow: hidden;
@@ -952,7 +1000,7 @@ textarea {
 }
 #studio > div p {
   width: 44.5%;
-  animation: fade-out 1s ease-in-out forwards;
+  animation: fade-out 2s ease-in-out forwards;
 }
 
 @media all and (max-width: 1192px) {

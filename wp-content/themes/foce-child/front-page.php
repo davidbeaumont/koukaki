@@ -4,7 +4,10 @@ get_header();
 ?>
 
     <main id="primary" class="site-main">
-        <section class="banner">
+        <section class="banner">   
+            <video id="background-video" autoplay loop muted>
+            <source src="<?php echo get_stylesheet_directory_uri() . '/assets/videos/Studio+Koukaki-vidéo+header+sans+son+(1).mp4" type="video/mp4'; ?>">
+            </video>
             <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
         </section>
         <section id="story" class="story">
@@ -48,7 +51,7 @@ get_header();
                     ?>
                 </div>
             </article>
-            <article id="place">
+            <article id="place" class="watch">
                 <div>
                     <h3>Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
