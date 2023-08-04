@@ -68,3 +68,32 @@ const observerCloud = new IntersectionObserver(entries => {
       observer.observe(target)
     })
   })
+
+
+  // effet accéleration des fleurs au scroll
+
+  const thresholdF = .1
+  const optionsF = {
+    root: null,
+    rootMargin: '0px',
+    thresholdF
+  }
+  
+  const handleIntersectF = function (entries, observer) {
+    entries.forEach(function (entry) {
+      if (entry.intersectionRatio > thresholdF) {
+        entry.target.classList.add('flower-loaded')
+      }
+      else (
+        entry.target.classList.remove('flower-loaded')
+      )
+    })
+  }
+  
+  window.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(handleIntersectF, options)
+    const targets = document.querySelectorAll('.flower')
+    targets.forEach(function (target) {
+      observer.observe(target)
+    })
+  })

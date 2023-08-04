@@ -11,9 +11,10 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer reveal">
+	<footer id="colophon" class="site-footer reveal flower">
+    <div class="sunflower flower"></div>
     <?php get_template_part( 'template-parts/oscars' ); ?>
-        <ul>
+        <ul class="flower">
             <li><a href="#">Mentions Légales</a></li>
             <li><a href="#">STUDIO KOUKAKI</a></li>
             <li><a href="#">Contact</a></li>

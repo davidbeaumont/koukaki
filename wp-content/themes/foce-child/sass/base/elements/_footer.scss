@@ -16,19 +16,11 @@
   padding-top: 7em;
   padding-bottom: 1em;
   overflow: hidden;
-  animation: $animation-fade-up;
-
-  &::before {
-    content: url('./assets/images/Sunflower.png');
-    position: absolute;
-    left: 4em;
-    top: 0em;
-  }
   &::after {
     content: url('./assets/images/orchid.png');
     position: absolute;
     right: -4em;
-    bottom: 7.8em;
+    top: 1em;
 
   }
   .oscars {
@@ -58,7 +50,17 @@
       z-index: -1;
     }
   }
+  .sunflower {
+    &::after {
+      content: url('./assets/images/Sunflower.png');
+      position: absolute;
+      left: 4em;
+      top: 0em;
+    }
+  }
 }
+
+
 @media all and (max-width: #{$breakpoint__small_tablet}) {
   .site-footer {
     &::before {

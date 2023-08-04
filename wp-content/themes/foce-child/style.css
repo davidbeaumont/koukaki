@@ -617,19 +617,12 @@ table {
   padding-top: 7em;
   padding-bottom: 1em;
   overflow: hidden;
-  animation: fade-up 2s ease-in-out forwards;
-}
-.site-footer::before {
-  content: url("./assets/images/Sunflower.png");
-  position: absolute;
-  left: 4em;
-  top: 0em;
 }
 .site-footer::after {
   content: url("./assets/images/orchid.png");
   position: absolute;
   right: -4em;
-  bottom: 7.8em;
+  top: 1em;
 }
 .site-footer .oscars {
   display: flex;
@@ -656,6 +649,12 @@ table {
   left: calc(50% - 323px);
   bottom: -28.5em;
   z-index: -1;
+}
+.site-footer .sunflower::after {
+  content: url("./assets/images/Sunflower.png");
+  position: absolute;
+  left: 4em;
+  top: 0em;
 }
 
 @media all and (max-width: 920px) {
@@ -843,13 +842,6 @@ textarea {
   animation: scale 5s 1s ease-in-out alternate 2;
 }
 
-.animation-rotation {
-  animation: rotation 20s linear infinite;
-}
-.animation-rotation__rapide {
-  animation: rotation 5s linear infinite;
-}
-
 .banner {
   min-height: 806px;
   background-size: cover;
@@ -867,6 +859,14 @@ textarea {
 #background-video {
   position: absolute;
   top: 48px;
+}
+
+.flower::after {
+  animation: rotation 20s linear infinite;
+}
+
+.flower-loaded::after {
+  animation: rotation 2s linear infinite;
 }
 
 .story {
@@ -967,12 +967,6 @@ textarea {
   position: relative;
   margin-top: 3em;
 }
-#studio .studio__flower::before {
-  content: url("./assets/images/random_flower.png");
-  position: absolute;
-  left: -5em;
-  top: 0;
-}
 #studio .studio__flower::after {
   content: url("./assets/images/flower.png");
   position: absolute;
@@ -993,6 +987,12 @@ textarea {
 }
 #studio > .studio__p p {
   width: 44.5%;
+}
+#studio .flower2::after {
+  content: url("./assets/images/random_flower.png");
+  position: absolute;
+  left: -5em;
+  top: 0;
 }
 
 @media all and (max-width: 1192px) {
