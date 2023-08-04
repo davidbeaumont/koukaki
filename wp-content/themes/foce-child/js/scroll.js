@@ -42,23 +42,6 @@ const observerCloud = new IntersectionObserver(entries => {
   observerCloud.observe(document.querySelector('.watch'));
 
   
-  // effet fade-up sur la section oscars
-
-const observerOscars = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    const fadeUp = entry.target.querySelector('.oscars');
-
-    if (entry.isIntersecting) {
-      fadeUp.classList.add('animation-fade-up');
-      return;
-    }
-
-    fadeUp.classList.remove('animation-fade-up');
-  });
-});
-
-observerOscars.observe(document.querySelector('.site-footer'));
-
 
   // effet fade-up au scroll
 
@@ -72,13 +55,11 @@ observerOscars.observe(document.querySelector('.site-footer'));
   const handleIntersect = function (entries, observer) {
     entries.forEach(function (entry) {
       if (entry.intersectionRatio > threshold) {
-        entry.target.classList.remove('reveal')
+        entry.target.classList.add('reveal-loaded')
         observer.unobserve(entry.target)
       }
     })
   }
-  
-  document.documentElement.classList.add('reveal-loaded')
   
   window.addEventListener("DOMContentLoaded", function () {
     const observer = new IntersectionObserver(handleIntersect, options)

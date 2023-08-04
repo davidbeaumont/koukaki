@@ -544,23 +544,10 @@ table {
 
 @keyframes fade-up {
   from {
-    transform: translateY(200px);
+    transform: translateY(150px);
     opacity: 0;
   }
-  80% {
-    opacity: 1;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes fade-down {
-  from {
-    transform: translateY(-200px);
-    opacity: 0;
-  }
-  80% {
+  50% {
     opacity: 1;
   }
   to {
@@ -614,7 +601,12 @@ table {
     transform: translate(0, 0);
   }
 }
-.animation-fade-up {
+.reveal {
+  transform: translateY(150px);
+  opacity: 0;
+}
+
+.reveal-loaded {
   animation: fade-up 2s ease-in-out forwards;
 }
 
@@ -777,23 +769,10 @@ textarea {
 --------------------------------------------------------------*/
 @keyframes fade-up {
   from {
-    transform: translateY(200px);
+    transform: translateY(150px);
     opacity: 0;
   }
-  80% {
-    opacity: 1;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes fade-down {
-  from {
-    transform: translateY(-200px);
-    opacity: 0;
-  }
-  80% {
+  50% {
     opacity: 1;
   }
   to {
@@ -848,7 +827,7 @@ textarea {
   }
 }
 .reveal {
-  transform: translateY(200px);
+  transform: translateY(150px);
   opacity: 0;
 }
 
@@ -864,11 +843,10 @@ textarea {
   animation: scale 5s 1s ease-in-out alternate 2;
 }
 
-.animation-rotation-lente {
+.animation-rotation {
   animation: rotation 20s linear infinite;
 }
-
-.animation-rotation-rapide {
+.animation-rotation__rapide {
   animation: rotation 5s linear infinite;
 }
 
@@ -878,7 +856,6 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
 }
 .banner img {
   position: relative;
@@ -897,7 +874,6 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fade-up 2s ease-in-out forwards;
 }
 .story__flower::before {
   content: url("./assets/images/sunflower_leaves.png");
@@ -990,7 +966,6 @@ textarea {
 #studio {
   position: relative;
   margin-top: 3em;
-  animation: fade-up 2s ease-in-out forwards;
 }
 #studio .studio__flower::before {
   content: url("./assets/images/random_flower.png");

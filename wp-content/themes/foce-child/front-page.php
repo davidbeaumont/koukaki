@@ -10,7 +10,7 @@ get_header();
             </video>
             <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
         </section>
-        <section id="story" class="story">
+        <section id="story" class="story reveal">
             <div class="container__h2" >    
                 <h2>L'histoire</h2>
             </div>
@@ -31,7 +31,7 @@ get_header();
             );
             $characters_query = new WP_Query($args);
             ?>
-            <article id="characters">
+            <article id="characters" class="reveal">
                 <div class="main-character">
                     <h3>Les personnages</h3>
                     <?php
@@ -57,7 +57,7 @@ get_header();
                     ?>
                 </div>
             </article>
-            <article id="place" class="watch">
+            <article id="place" class="watch reveal">
                 <div>
                     <h3>Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
@@ -68,7 +68,7 @@ get_header();
         </section>
 
 
-        <section id="studio">
+        <section id="studio" class="reveal">
             <div class="container__h2">    
                 <h2>Studio Koukaki</h2>
             </div>

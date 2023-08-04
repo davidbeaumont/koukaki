@@ -11,7 +11,7 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
+	<footer id="colophon" class="site-footer reveal">
     <?php get_template_part( 'template-parts/oscars' ); ?>
         <ul>
             <li><a href="#">Mentions Légales</a></li>

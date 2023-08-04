@@ -1,6 +1,11 @@
 @import "../../animations/animation.scss";
 
-.animation-fade-up {
+.reveal {
+  transform: translateY(150px);
+  opacity: 0;
+}
+
+.reveal-loaded {
   animation: $animation-fade-up;
 }
 

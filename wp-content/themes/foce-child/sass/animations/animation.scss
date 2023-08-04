@@ -1,9 +1,9 @@
 @keyframes fade-up {
     from {
-      transform: translateY(200px);
+      transform: translateY(150px);
       opacity: 0;
     }
-    80% {
+    50% {
       opacity: 1;
     }
     to {
@@ -12,24 +12,6 @@
     }
 }
 $animation-fade-up: fade-up 2s ease-in-out forwards;
-
-  
-
-@keyframes fade-down {
-  from {
-    transform: translateY(-200px);
-    opacity: 0;
-  }
-  80% {
-    opacity: 1;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-$animation-fade-down: fade-down 2s ease-in-out forwards;
-
 
 
 @keyframes rotation {
@@ -41,7 +23,7 @@ $animation-fade-down: fade-down 2s ease-in-out forwards;
   }
 }
 /* Rotation lente */
-$animation-rotation-lente: rotation 20s linear infinite;
+$animation-rotation: rotation 20s linear infinite;
 /* Rotation rapide */
 $animation-rotation-rapide: rotation 5s linear infinite;
 
