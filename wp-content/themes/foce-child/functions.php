@@ -5,7 +5,7 @@ function theme_enqueue_styles() {
     wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/style.css', array(), filemtime(get_stylesheet_directory() . '/style.css'));
     wp_enqueue_script( 'scroll', get_stylesheet_directory_uri() . '/js/scroll.js', array( 'jquery' ), 1.1, true);
     wp_enqueue_script( 'parallax', get_stylesheet_directory_uri() . '/js/parallax.js', array( 'jquery' ), 1.1, true);
-
+    wp_enqueue_script( 'fallback', get_stylesheet_directory_uri() . '/js/fallback.js', array( 'jquery' ), 1.1, true);
 }
 
 // Get customizer options form parent theme

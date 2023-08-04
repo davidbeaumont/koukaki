@@ -1,4 +1,4 @@
-// effet sur les titres
+// effet scale sur les titres
 
 const observerTitle = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -24,7 +24,7 @@ elementsToObserve.forEach(element => {
 
 
 
-// effet sur le nuage
+// effet translate sur le nuage
 
 const observerCloud = new IntersectionObserver(entries => {
     entries.forEach(entry => {

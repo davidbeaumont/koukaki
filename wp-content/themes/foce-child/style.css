@@ -856,7 +856,12 @@ textarea {
   animation: flottement 3s linear alternate infinite;
 }
 
+.fallback {
+  background-image: url("./assets/images/banner.png");
+}
+
 #background-video {
+  display: block;
   position: absolute;
   top: 48px;
 }
@@ -1006,6 +1011,9 @@ textarea {
   }
 }
 @media all and (max-width: 1040px) {
+  .banner video {
+    display: none !important;
+  }
   .story__article::before {
     left: 33%;
     top: 15em;

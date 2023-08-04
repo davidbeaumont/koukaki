@@ -31,7 +31,12 @@
   }
 }
 
+.fallback {
+  background-image: url("./assets/images/banner.png");
+}
+
 #background-video {
+  display: block;
   position: absolute;
   top: 48px;
 }
@@ -183,6 +188,7 @@
 }
 
 @media all and (max-width: #{$breakpoint__laptop}) {
+  
   .story {
     &__article {
       &::before {
@@ -198,6 +204,11 @@
 }
 
 @media all and (max-width: #{$breakpoint__tablet}) {
+
+  .banner video {
+    display: none !important;
+  }
+
   .story {
     &__article {
       &::before {
