@@ -11,7 +11,7 @@ get_header();
             <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
         </section>
         <section id="story" class="story">
-            <div class="container__h2">    
+            <div class="container__h2" >    
                 <h2>L'histoire</h2>
             </div>
             <div class="story__flower">

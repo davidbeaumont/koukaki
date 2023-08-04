@@ -1,16 +1,29 @@
 @import "../animations/animation.scss";
 
+.reveal {
+  transform: translateY(200px);
+  opacity: 0;
+}
+
+.reveal-loaded {
+  animation: $animation-fade-up;
+}
+
 .animation-translate {
   animation: $animation-translate;
 }
 
-.animation-fade-up {
-  animation: $animation-fade-up;
-}
-
 .animation-scale {
   animation: $animation-scale;
-}    
+} 
+
+.animation-rotation-lente {
+  animation: $animation-rotation-lente;
+}
+
+.animation-rotation-rapide {
+  animation: $animation-rotation-rapide;
+}
 
 
 .banner {
@@ -20,6 +33,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
   img {
     position: relative;
     margin-top: -10%;
@@ -49,7 +63,6 @@
     }
     &::after {
       content: url('./assets/images/Sunflower.png');
-      animation: $animation-rotation;
       position: absolute;
       left: 3em;
       top: 26em;
@@ -65,7 +78,6 @@
     }
     &::after {
       content: url('./assets/images/Hibiscus.png');
-      animation: $animation-rotation;
       position: absolute;
       left: calc(52% + 414px);
       top: 4em;
@@ -81,14 +93,12 @@
     font-size: 15px;
     padding-bottom: 2em;
     background-color: $color__background-body;
-    animation: $animation-fade-down;
   }
 
   #characters {
     margin: 6em;
     display: flex;
     text-align: center;
-    animation: $animation-fade-up;
     h3 {
       background-image: url("./assets/images/orange_characters_bg.png");
     }
@@ -125,7 +135,6 @@
       margin-left: 6em;
       p {
         padding-left: 5em;
-        animation: $animation-fade-down;
       }
     }
     .blue-cloud {
@@ -143,21 +152,19 @@
 #studio {
   position: relative;
   margin-top: 3em;
+  animation: $animation-fade-up;
   .studio__flower {
-    animation: $animation-fade-up;
     &::before {
       content: url('./assets/images/random_flower.png');
-      animation: $animation-rotation;
       position: absolute;
       left: -5em;
-      top: -17em;
+      top: 0;
     }
     &::after {
       content: url('./assets/images/flower.png');
-      animation: $animation-rotation;
       position: absolute;
       right: 1em;
-      top: -10em;
+      top: 1.2em;
     }
   }
   > .studio__p {
@@ -167,14 +174,12 @@
     margin: auto;
     &::before {
       content: url('./assets/images/trple-leaf.png');
-      animation: $animation-fade-up;
       position: absolute;
       left: calc(50% - 17.225px);
       top: 40%;
     }
     p{
     width: 44.5%;
-    //animation: $animation-fade-down;
     }
   }
 }

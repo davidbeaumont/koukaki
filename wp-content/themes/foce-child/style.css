@@ -576,6 +576,8 @@ table {
     transform: rotate(360deg);
   }
 }
+/* Rotation lente */
+/* Rotation rapide */
 @keyframes scale {
   from {
     transform: scale(1);
@@ -627,14 +629,12 @@ table {
 }
 .site-footer::before {
   content: url("./assets/images/Sunflower.png");
-  animation: rotation 20s linear infinite;
   position: absolute;
   left: 4em;
   top: 0em;
 }
 .site-footer::after {
   content: url("./assets/images/orchid.png");
-  animation: rotation 20s linear infinite;
   position: absolute;
   right: -4em;
   bottom: 7.8em;
@@ -660,7 +660,6 @@ table {
 }
 .site-footer ul::after {
   content: url("./assets/images/hibiscus_footer.png");
-  animation: rotation 20s linear infinite;
   position: absolute;
   left: calc(50% - 323px);
   bottom: -28.5em;
@@ -810,6 +809,8 @@ textarea {
     transform: rotate(360deg);
   }
 }
+/* Rotation lente */
+/* Rotation rapide */
 @keyframes scale {
   from {
     transform: scale(1);
@@ -846,16 +847,29 @@ textarea {
     transform: translate(0, 0);
   }
 }
+.reveal {
+  transform: translateY(200px);
+  opacity: 0;
+}
+
+.reveal-loaded {
+  animation: fade-up 2s ease-in-out forwards;
+}
+
 .animation-translate {
   animation: translate 12s ease-in-out alternate;
 }
 
-.animation-fade-up {
-  animation: fade-up 2s ease-in-out forwards;
+.animation-scale {
+  animation: scale 5s 1s ease-in-out alternate 2;
 }
 
-.animation-scale {
-  animation: scale 5s 2s ease-in-out alternate;
+.animation-rotation-lente {
+  animation: rotation 20s linear infinite;
+}
+
+.animation-rotation-rapide {
+  animation: rotation 5s linear infinite;
 }
 
 .banner {
@@ -864,6 +878,7 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 .banner img {
   position: relative;
@@ -893,7 +908,6 @@ textarea {
 }
 .story__flower::after {
   content: url("./assets/images/Sunflower.png");
-  animation: rotation 20s linear infinite;
   position: absolute;
   left: 3em;
   top: 26em;
@@ -907,7 +921,6 @@ textarea {
 }
 .story__flower2::after {
   content: url("./assets/images/Hibiscus.png");
-  animation: rotation 20s linear infinite;
   position: absolute;
   left: calc(52% + 414px);
   top: 4em;
@@ -921,13 +934,11 @@ textarea {
   font-size: 15px;
   padding-bottom: 2em;
   background-color: #FFF5E9;
-  animation: fade-down 2s ease-in-out forwards;
 }
 .story #characters {
   margin: 6em;
   display: flex;
   text-align: center;
-  animation: fade-up 2s ease-in-out forwards;
 }
 .story #characters h3 {
   background-image: url("./assets/images/orange_characters_bg.png");
@@ -966,7 +977,6 @@ textarea {
 }
 .story #place > div p {
   padding-left: 5em;
-  animation: fade-down 2s ease-in-out forwards;
 }
 .story #place .blue-cloud {
   display: flex;
@@ -980,23 +990,19 @@ textarea {
 #studio {
   position: relative;
   margin-top: 3em;
-}
-#studio .studio__flower {
   animation: fade-up 2s ease-in-out forwards;
 }
 #studio .studio__flower::before {
   content: url("./assets/images/random_flower.png");
-  animation: rotation 20s linear infinite;
   position: absolute;
   left: -5em;
-  top: -17em;
+  top: 0;
 }
 #studio .studio__flower::after {
   content: url("./assets/images/flower.png");
-  animation: rotation 20s linear infinite;
   position: absolute;
   right: 1em;
-  top: -10em;
+  top: 1.2em;
 }
 #studio > .studio__p {
   display: flex;
@@ -1006,7 +1012,6 @@ textarea {
 }
 #studio > .studio__p::before {
   content: url("./assets/images/trple-leaf.png");
-  animation: fade-up 2s ease-in-out forwards;
   position: absolute;
   left: calc(50% - 17.225px);
   top: 40%;

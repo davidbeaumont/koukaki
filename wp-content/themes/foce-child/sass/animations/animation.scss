@@ -40,7 +40,10 @@ $animation-fade-down: fade-down 2s ease-in-out forwards;
     transform: rotate(360deg);
   }
 }
-$animation-rotation: rotation 20s linear infinite;
+/* Rotation lente */
+$animation-rotation-lente: rotation 20s linear infinite;
+/* Rotation rapide */
+$animation-rotation-rapide: rotation 5s linear infinite;
 
 
 
@@ -55,7 +58,7 @@ $animation-rotation: rotation 20s linear infinite;
     transform: scale(1);
   }
 }
-$animation-scale: scale 5s 2s ease-in-out alternate;
+$animation-scale: scale 5s 1s ease-in-out alternate 2;
 
 
 @keyframes translate {
