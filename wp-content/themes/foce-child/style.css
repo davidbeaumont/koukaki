@@ -1000,6 +1000,11 @@ textarea {
   top: 0;
 }
 
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
 @media all and (max-width: 1192px) {
   .story__article::before {
     left: 40%;

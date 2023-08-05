@@ -31,7 +31,7 @@ get_header();
             );
             $characters_query = new WP_Query($args);
             ?>
-            <article id="characters" class="reveal">
+            <article id="characters" class="reveal">                   
                 <div class="main-character">
                     <h3>Les personnages</h3>
                     <?php
@@ -56,6 +56,27 @@ get_header();
                     }
                     ?>
                 </div>
+                <!-- Slider main container -->
+                <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+                </div>
+
             </article>
             <article id="place" class="watch reveal">
                 <div>
