@@ -86,9 +86,6 @@
   }
 
   &__article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
     width: 50%;
     font-size: 15px;
@@ -97,25 +94,49 @@
   }
 
   #characters {
-    margin: 6em;
-    display: flex;
-    text-align: center;
+    width: 100%;
+    margin: 6em 0 6em 0;
     h3 {
       background-image: url("./assets/images/orange_characters_bg.png");
-    }
-    div {
-      flex: 1
-    }
-    .other-characters {
-      display: flex;
-      flex-wrap: wrap;
-      figure {
-        width: 50%;
-        padding: 2% 10%;
-        margin: 0;
-      }
+      padding: 1em;
+      margin-left: 120px;
+      background-position: left;
+      text-align: left;
     }
   }
+  // swiper
+  .swiper {
+    width: 90%;
+    padding-bottom: 60px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 440px;
+    height: 440px;
+    p {
+      text-align: center;
+      margin-top: 430px;
+      font-size: 1.5em;
+    }
+  }
+  .slide1 {
+    background-image: url("./assets/images/Kawaneko.png");
+  }
+  .slide2 {
+    background-image: url("./assets/images/Orenjiiro-1.png");
+  }
+  .slide3 {
+    background-image: url("./assets/images/Pinku-1.png");
+  }
+  .slide4 {
+    background-image: url("./assets/images/Tenshi-1.png");
+  }
+  .slide5 {
+    background-image: url("./assets/images/Jaakuna-1.png");
+  }
+
   #place {
     display: flex;
     justify-content: space-around;

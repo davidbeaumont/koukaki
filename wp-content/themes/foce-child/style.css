@@ -907,9 +907,6 @@ textarea {
   top: 4em;
 }
 .story__article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
   width: 50%;
   font-size: 15px;
@@ -917,24 +914,45 @@ textarea {
   background-color: #FFF5E9;
 }
 .story #characters {
-  margin: 6em;
-  display: flex;
-  text-align: center;
+  width: 100%;
+  margin: 6em 0 6em 0;
 }
 .story #characters h3 {
   background-image: url("./assets/images/orange_characters_bg.png");
+  padding: 1em;
+  margin-left: 120px;
+  background-position: left;
+  text-align: left;
 }
-.story #characters div {
-  flex: 1;
+.story .swiper {
+  width: 90%;
+  padding-bottom: 60px;
 }
-.story #characters .other-characters {
-  display: flex;
-  flex-wrap: wrap;
+.story .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 440px;
+  height: 440px;
 }
-.story #characters .other-characters figure {
-  width: 50%;
-  padding: 2% 10%;
-  margin: 0;
+.story .swiper-slide p {
+  text-align: center;
+  margin-top: 430px;
+  font-size: 1.5em;
+}
+.story .slide1 {
+  background-image: url("./assets/images/Kawaneko.png");
+}
+.story .slide2 {
+  background-image: url("./assets/images/Orenjiiro-1.png");
+}
+.story .slide3 {
+  background-image: url("./assets/images/Pinku-1.png");
+}
+.story .slide4 {
+  background-image: url("./assets/images/Tenshi-1.png");
+}
+.story .slide5 {
+  background-image: url("./assets/images/Jaakuna-1.png");
 }
 .story #place {
   display: flex;
