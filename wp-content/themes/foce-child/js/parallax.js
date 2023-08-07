@@ -52,10 +52,8 @@ function parallaxScrollFleur() {
 
       // Appliquer la classe de rotation en fonction de la position de défilement
       if (scrollPosition > fleurPosition) {
-          fleur.classList.add('flower-loaded');
-      } else {
-          fleur.classList.remove('flower-loaded');
-      }
+          fleur.style.animationDuration = '2s';
+      } 
 
       fleur.style.transition = `transform ${rotationSpeed}s linear`;
   });

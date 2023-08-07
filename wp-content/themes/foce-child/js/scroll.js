@@ -51,15 +51,35 @@ elementsToObserve.forEach(element => {
   })
 
 
-  // effet accéleration des fleurs au scroll
-const flower = document.querySelector('.flower');
+  // effet accéleration des fleurs (section story) au scroll
+  const flowers = document.querySelectorAll('.flower');
 
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
-  const rotationSpeed = scrollPosition * 0.1; // Vous pouvez ajuster ce coefficient
 
-  flower.style.animationDuration = `${5 - rotationSpeed}s`;
+  flowers.forEach((flower, index) => {
+    const rotationSpeed = scrollPosition * 0.05; // Vous pouvez ajuster ce coefficient
+    flower.style.animationDuration = `${rotationSpeed/3}s`;
+
+  });
+
 });
+
+  // effet accéleration des fleurs (section studio) au scroll
+  const rotateFlowers = document.querySelectorAll('.rotateFlower');
+
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+
+  rotateFlowers.forEach((rotateFlower, index) => {
+    const rotationSpeed = scrollPosition * 0.05; // Vous pouvez ajuster ce coefficient
+    rotateFlower.style.animationDuration = `${rotationSpeed/22}s`;
+
+  });
+
+});
+
+
 
   
   

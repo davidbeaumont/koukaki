@@ -11,14 +11,17 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer reveal flower">
-    <div class="sunflower flower"></div>
+	<footer id="colophon" class="site-footer reveal">
+    <div class="sunflower rotateFlower"></div>
+    <div class="orchid rotateFlower"></div>
+
     <?php get_template_part( 'template-parts/oscars' ); ?>
-        <ul class="flower">
+        <ul>
             <li><a href="#">Mentions Légales</a></li>
             <li><a href="#">STUDIO KOUKAKI</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
+        <div class="hibiscus rotateFlower"></div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

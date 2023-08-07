@@ -564,7 +564,6 @@ table {
   }
 }
 /* Rotation lente */
-/* Rotation rapide */
 @keyframes scale {
   from {
     transform: scale(1);
@@ -618,12 +617,6 @@ table {
   padding-bottom: 1em;
   overflow: hidden;
 }
-.site-footer::after {
-  content: url("./assets/images/orchid.png");
-  position: absolute;
-  right: -4em;
-  top: 1em;
-}
 .site-footer .oscars {
   display: flex;
   justify-content: center;
@@ -643,14 +636,20 @@ table {
 .site-footer ul li a {
   text-decoration: none;
 }
-.site-footer ul::after {
+.site-footer .orchid {
+  content: url("./assets/images/orchid.png");
+  position: absolute;
+  right: -4em;
+  top: 1em;
+}
+.site-footer .hibiscus {
   content: url("./assets/images/hibiscus_footer.png");
   position: absolute;
   left: calc(50% - 323px);
   bottom: -28.5em;
   z-index: -1;
 }
-.site-footer .sunflower::after {
+.site-footer .sunflower {
   content: url("./assets/images/Sunflower.png");
   position: absolute;
   left: 4em;
@@ -788,7 +787,6 @@ textarea {
   }
 }
 /* Rotation lente */
-/* Rotation rapide */
 @keyframes scale {
   from {
     transform: scale(1);
@@ -866,7 +864,11 @@ textarea {
   top: 48px;
 }
 
-.flower::after {
+.flower {
+  animation: rotation 20s linear infinite;
+}
+
+.rotateFlower {
   animation: rotation 20s linear infinite;
 }
 
@@ -876,27 +878,27 @@ textarea {
   flex-direction: column;
   align-items: center;
 }
-.story__flower::before {
+.story__leave {
   content: url("./assets/images/sunflower_leaves.png");
   position: absolute;
   left: 0;
   top: 7.5em;
   z-index: -1;
 }
-.story__flower::after {
+.story__flower {
   content: url("./assets/images/Sunflower.png");
   position: absolute;
   left: 3em;
   top: 26em;
 }
-.story__flower2::before {
+.story__leave2 {
   content: url("./assets/images/hibiscus_leaves.png");
   position: absolute;
   left: 52%;
   top: 10em;
   z-index: -1;
 }
-.story__flower2::after {
+.story__flower2 {
   content: url("./assets/images/Hibiscus.png");
   position: absolute;
   left: calc(52% + 414px);
@@ -987,7 +989,7 @@ textarea {
   position: relative;
   margin-top: 3em;
 }
-#studio .studio__flower::after {
+#studio .studio__flower {
   content: url("./assets/images/flower.png");
   position: absolute;
   right: 1em;
@@ -1008,7 +1010,7 @@ textarea {
 #studio > .studio__p p {
   width: 44.5%;
 }
-#studio .flower2::after {
+#studio .studio__flower2 {
   content: url("./assets/images/random_flower.png");
   position: absolute;
   left: -5em;

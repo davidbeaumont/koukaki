@@ -41,7 +41,10 @@
   top: 48px;
 }
 
-.flower::after {
+.flower {
+  animation: $animation-rotation;
+}
+.rotateFlower {
   animation: $animation-rotation;
 }
 
@@ -50,35 +53,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  &__leave {
+    content: url('./assets/images/sunflower_leaves.png');
+    position: absolute;
+    left: 0;
+    top: 7.5em;
+    z-index: -1;
+  }
   &__flower {
-    &::before {
-      content: url('./assets/images/sunflower_leaves.png');
-      position: absolute;
-      left: 0;
-      top: 7.5em;
-      z-index: -1;
-    }
-    &::after {
-      content: url('./assets/images/Sunflower.png');
-      position: absolute;
-      left: 3em;
-      top: 26em;
-    }
+    content: url('./assets/images/Sunflower.png');
+    position: absolute;
+    left: 3em;
+    top: 26em;
+  }
+  &__leave2 {
+    content: url('./assets/images/hibiscus_leaves.png');
+    position: absolute;
+    left: 52%;
+    top: 10em;
+    z-index: -1;
   }
   &__flower2 {
-    &::before {
-      content: url('./assets/images/hibiscus_leaves.png');
-      position: absolute;
-      left: 52%;
-      top: 10em;
-      z-index: -1;
-    }
-    &::after {
-      content: url('./assets/images/Hibiscus.png');
-      position: absolute;
-      left: calc(52% + 414px);
-      top: 4em;
-    }
+    content: url('./assets/images/Hibiscus.png');
+    position: absolute;
+    left: calc(52% + 414px);
+    top: 4em;
   }
 
   &__article {
@@ -172,12 +171,10 @@
   position: relative;
   margin-top: 3em;
   .studio__flower {
-    &::after {
-      content: url('./assets/images/flower.png');
-      position: absolute;
-      right: 1em;
-      top: 1.2em;
-    }
+    content: url('./assets/images/flower.png');
+    position: absolute;
+    right: 1em;
+    top: 1.2em;
   }
   > .studio__p {
     display: flex;
@@ -194,14 +191,11 @@
     width: 44.5%;
     }
   }
-  .flower2 {
-    &::after {
-      content: url('./assets/images/random_flower.png');
-      position: absolute;
-      left: -5em;
-      top: 0;
-    }
-
+  .studio__flower2 {
+    content: url('./assets/images/random_flower.png');
+    position: absolute;
+    left: -5em;
+    top: 0;
   }
 }
 
