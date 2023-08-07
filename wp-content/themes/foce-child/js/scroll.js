@@ -24,24 +24,7 @@ elementsToObserve.forEach(element => {
 
 
 
-// effet translate sur le nuage
 
-const observerCloud = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const translate = entry.target.querySelector('.blue-cloud');
-  
-      if (entry.isIntersecting) {
-        translate.classList.add('animation-translate');
-        return;
-      }
-  
-      translate.classList.remove('animation-translate');
-    });
-  });
-  
-  observerCloud.observe(document.querySelector('.watch'));
-
-  
 
   // effet fade-up au scroll
 

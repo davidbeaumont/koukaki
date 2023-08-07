@@ -14,4 +14,22 @@ function parallaxScroll() {
   
   // Écouter l'événement de défilement pour activer l'effet de parallax
   window.addEventListener('scroll', parallaxScroll);
-  
+
+
+
+// Fonction parallax sur nuage bleu
+function parallaxScrollNuage() {
+  const nuage = document.querySelector('.blue-cloud');
+  const place = document.getElementById('place');
+    
+  const scrollPosition = window.scrollY;
+  const nuagePosition = nuage.offsetTop;
+  const speed = 0.5; // Réglage de la vitesse de défilement
+
+  // Déplacement horizontal du nuage
+  const nuageOffset = -(scrollPosition - nuagePosition) * (speed * 0.8);
+  nuage.style.transform = `translateX(${nuageOffset}px)`;  
+}
+
+// Écouter l'événement de défilement pour activer l'effet de parallax
+window.addEventListener('scroll', parallaxScrollNuage);
