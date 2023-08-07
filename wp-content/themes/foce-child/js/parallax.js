@@ -20,7 +20,6 @@ function parallaxScroll() {
 // Fonction parallax sur nuage bleu
 function parallaxScrollNuage() {
   const nuage = document.querySelector('.blue-cloud');
-  const place = document.getElementById('place');
     
   const scrollPosition = window.scrollY;
   const nuagePosition = nuage.offsetTop;
@@ -33,3 +32,35 @@ function parallaxScrollNuage() {
 
 // Écouter l'événement de défilement pour activer l'effet de parallax
 window.addEventListener('scroll', parallaxScrollNuage);
+
+
+
+
+/*
+// Fonction parallax sur fleur avec animation de rotation
+function parallaxScrollFleur() {
+  const fleurs = document.querySelectorAll('.flower');
+
+  const scrollPosition = window.scrollY;
+  const rotationSpeedSlow = 0.2; // Vitesse de rotation lente
+
+  fleurs.forEach((fleur) => {
+      const fleurPosition = fleur.offsetTop;
+
+      // Rotation de la fleur avec accélération en fonction du scroll
+      const rotationSpeed = rotationSpeedSlow + (scrollPosition - fleurPosition) * 0.001;
+
+      // Appliquer la classe de rotation en fonction de la position de défilement
+      if (scrollPosition > fleurPosition) {
+          fleur.classList.add('flower-loaded');
+      } else {
+          fleur.classList.remove('flower-loaded');
+      }
+
+      fleur.style.transition = `transform ${rotationSpeed}s linear`;
+  });
+}
+
+// Écouter l'événement de défilement pour activer l'effet de parallax
+window.addEventListener('scroll', parallaxScrollFleur);
+*/

@@ -24,8 +24,6 @@ elementsToObserve.forEach(element => {
 
 
 
-
-
   // effet fade-up au scroll
 
   const threshold = .1
@@ -54,29 +52,14 @@ elementsToObserve.forEach(element => {
 
 
   // effet accéleration des fleurs au scroll
+const flower = document.querySelector('.flower');
 
-  const thresholdF = .1
-  const optionsF = {
-    root: null,
-    rootMargin: '0px',
-    thresholdF
-  }
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+  const rotationSpeed = scrollPosition * 0.1; // Vous pouvez ajuster ce coefficient
+
+  flower.style.animationDuration = `${5 - rotationSpeed}s`;
+});
+
   
-  const handleIntersectF = function (entries, observer) {
-    entries.forEach(function (entry) {
-      if (entry.intersectionRatio > thresholdF) {
-        entry.target.classList.add('flower-loaded')
-      }
-      else (
-        entry.target.classList.remove('flower-loaded')
-      )
-    })
-  }
   
-  window.addEventListener("DOMContentLoaded", function () {
-    const observer = new IntersectionObserver(handleIntersectF, options)
-    const targets = document.querySelectorAll('.flower')
-    targets.forEach(function (target) {
-      observer.observe(target)
-    })
-  })
