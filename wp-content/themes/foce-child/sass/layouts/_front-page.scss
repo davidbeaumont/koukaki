@@ -15,7 +15,11 @@
 
 .animation-scale {
   animation: $animation-scale;
-} 
+}
+
+.cat {
+  animation: $animation-flottement;
+}
 
 .banner {
   min-height: 806px;
