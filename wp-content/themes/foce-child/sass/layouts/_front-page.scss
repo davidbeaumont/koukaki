@@ -226,36 +226,28 @@
   }
 
   .story {
-    &__article {
-      &::before {
-        left: 33%;
-        top: 15em;
-      }
-
-      &::after {
-        //content: url('./assets/images/Hibiscus.png');
-        position: absolute;
-        left: calc(33% + 414px);
-        top: 9em;
-      }
+    &__leave2 {
+      left: calc(33% + 75px);
     }
-    #characters {
-      flex-direction: column;
+    &__flower2 {
+      left: calc(33% + 490px);
     }
+  }
+  .swiper-slide {
+    width: 300px !important;
+    height: 300px !important;
   }
 }
 
 @media all and (max-width: #{$breakpoint__small_tablet}) {
   .story {
-    h2{
-      &::before {
-        content: '';
-      }
-
-      &::after {
-        content: '';
-      }
+    &__leave, 
+    &__flower, 
+    &__flower2, 
+    &__leave2 {
+      content: '';
     }
+
     &__article {
       width: 80%;
       &::before {
@@ -270,6 +262,9 @@
       flex-direction: column;
     }
     #place {
+      .blue-cloud {
+        display: none;
+      }
       > div {
         margin: auto;
         width: 75%;
@@ -277,11 +272,6 @@
     }
   }
   #studio {
-    h2 {
-      &::after {
-        content: '';
-      }
-    }
     > div {
       &::before {
         content: '';
@@ -290,6 +280,18 @@
       p {
         width: 100%;
       }
+    }
+    .studio {
+      &__flower,
+      &__flower2,
+      &__p::before {
+        content: '';
+      }
+      &__p {
+        p {
+          width: 100%;
+        }
+      }    
     }
   }
 }

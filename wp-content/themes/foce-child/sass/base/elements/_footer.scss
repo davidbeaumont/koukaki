@@ -61,18 +61,24 @@
   }
 }
 
+@media all and (max-width: #{$breakpoint__tablet}) {
+  .oscars {
+    img {
+      width: 70%;
+    }
+  }
+}
 
 @media all and (max-width: #{$breakpoint__small_tablet}) {
   .site-footer {
-    &::before {
+    .sunflower, .orchid {
       content: '';
-
     }
   }
 }
 @media all and (max-width: #{$breakpoint__large_phone}) {
   .site-footer {
-    &::after {
+    .hibiscus {
       content: '';
 
     }

@@ -667,13 +667,18 @@ table {
   top: 0em;
 }
 
+@media all and (max-width: 1040px) {
+  .oscars img {
+    width: 70%;
+  }
+}
 @media all and (max-width: 920px) {
-  .site-footer::before {
+  .site-footer .sunflower, .site-footer .orchid {
     content: "";
   }
 }
 @media all and (max-width: 700px) {
-  .site-footer::after {
+  .site-footer .hibiscus {
     content: "";
   }
 }
@@ -1057,24 +1062,19 @@ textarea {
   .banner video {
     display: none !important;
   }
-  .story__article::before {
-    left: 33%;
-    top: 15em;
+  .story__leave2 {
+    left: calc(33% + 75px);
   }
-  .story__article::after {
-    position: absolute;
-    left: calc(33% + 414px);
-    top: 9em;
+  .story__flower2 {
+    left: calc(33% + 490px);
   }
-  .story #characters {
-    flex-direction: column;
+  .swiper-slide {
+    width: 300px !important;
+    height: 300px !important;
   }
 }
 @media all and (max-width: 920px) {
-  .story h2::before {
-    content: "";
-  }
-  .story h2::after {
+  .story__leave, .story__flower, .story__flower2, .story__leave2 {
     content: "";
   }
   .story__article {
@@ -1089,12 +1089,12 @@ textarea {
   .story #characters {
     flex-direction: column;
   }
+  .story #place .blue-cloud {
+    display: none;
+  }
   .story #place > div {
     margin: auto;
     width: 75%;
-  }
-  #studio h2::after {
-    content: "";
   }
   #studio > div {
     flex-direction: column;
@@ -1103,6 +1103,12 @@ textarea {
     content: "";
   }
   #studio > div p {
+    width: 100%;
+  }
+  #studio .studio__flower, #studio .studio__flower2, #studio .studio__p::before {
+    content: "";
+  }
+  #studio .studio__p p {
     width: 100%;
   }
 }
@@ -1133,21 +1139,6 @@ a, a:visited {
   display: block;
   height: 80px;
   width: 100%;
-  /* #icons {
-  	z-index: 1001;
-  	cursor: pointer;
-  	position: absolute;
-  	right: 0;
-  	margin: 20px 20px 0 0;
-  	&::before {
-  		content: "\2630";
-  		font-size: 2em;	
-  	}
-  	&:active::before {
-  		content: "\2715";
-  		font-size: 2em;
-  	}
-  } */
 }
 .main-navigation .burger {
   width: 40px;
@@ -1264,7 +1255,7 @@ a, a:visited {
   position: absolute;
   top: -900px;
   background-color: #FFF5E9;
-  width: 1440px;
+  width: 100%;
   height: 850px;
   overflow: hidden;
 }
@@ -1287,6 +1278,22 @@ nav.active ul {
   animation: fade 2s ease-in-out forwards;
 }
 
+@media all and (max-width: 1040px) {
+  .main-navigation ul {
+    width: 100vw;
+  }
+  .main-navigation ul li {
+    font-size: 32px;
+  }
+}
+@media all and (max-width: 920px) {
+  .main-navigation ul div {
+    display: none;
+  }
+  .main-navigation ul li {
+    font-size: 24px;
+  }
+}
 /* Posts and pages
 --------------------------------------------- */
 .sticky {

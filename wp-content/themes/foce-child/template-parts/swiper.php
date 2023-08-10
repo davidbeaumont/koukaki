@@ -5,7 +5,6 @@ const swiper = new Swiper('.swiper', {
 // Optional parameters
     effect: 'coverflow',
     loop: true,
-    loopFillGroupWithBlank: true,
     slidesPerView: 3,
     slidesPerGroup: 1,
     grabCursor: true,
@@ -17,7 +16,6 @@ const swiper = new Swiper('.swiper', {
     modifier: 1,
     slideShadows: false,
     },
-
 
 // If we need pagination
 pagination: {
@@ -43,11 +41,4 @@ navigation: {
     <div class="swiper-slide slide4"><p>Tenshi</p></div>
     <div class="swiper-slide slide5"><p>Jaakuna</p></div>
 </div>
-<!-- If we need pagination 
-<div class="swiper-pagination">    ...</div>  -->
-
-<!-- If we need navigation buttons  
-<div class="swiper-button-prev"></div>
-<div class="swiper-button-next"></div> -->
-
 </div>
