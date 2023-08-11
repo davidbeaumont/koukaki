@@ -14,7 +14,6 @@
 	<footer id="colophon" class="site-footer reveal">
     <div class="sunflower rotateFlower"></div>
     <div class="orchid rotateFlower"></div>
-
     <?php get_template_part( 'template-parts/oscars' ); ?>
         <ul>
             <li><a href="#">Mentions Légales</a></li>

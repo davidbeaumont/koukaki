@@ -25,7 +25,6 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'foce' ); ?></a>
-
 	<header id="masthead" class="site-header">
 		<nav id="nav" class="main-navigation">
             <div id="icons" class="burger">
@@ -33,14 +32,14 @@
             </div>
             <div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
             <ul>
-                <div class="orchid_menu flower"></div>
+                <div class="orchid_menu flower__menu"></div>
                 <div class="cat-1_menu cat"></div>
-                <div class="sunflower_menu flower"></div>
-                <div class="random-flower_menu flower"></div>
-                <div class="flower_menu flower"></div>
+                <div class="sunflower_menu flower__menu"></div>
+                <div class="random-flower_menu flower__menu"></div>
+                <div class="flower_menu flower__menu"></div>
                 <div class="cat-2_menu cat"></div>
                 <div class="cat-3_menu cat"></div>
-                <div class="hibiscus_menu flower"></div>
+                <div class="hibiscus_menu flower__menu"></div>
                 <div class="logo_menu"></div>
                 <li><a href="#story">Histoire</a></li>
                 <li><a href="#characters">Personnages</a></li>
@@ -48,6 +47,5 @@
                 <li><a href="#studio">Studio Koukaki</a></li>
                 <p>STUDIO KOUKAKI</p>
             </ul>
-
 		</nav><!-- #nav -->
 	</header><!-- #masthead -->

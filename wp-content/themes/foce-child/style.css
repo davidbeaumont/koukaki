@@ -895,11 +895,10 @@ textarea {
   top: 48px;
 }
 
-.flower {
+.flower, .rotateFlower {
   animation: rotation 20s linear infinite;
 }
-
-.rotateFlower {
+.flower__menu, .rotateFlower__menu {
   animation: rotation 20s linear infinite;
 }
 

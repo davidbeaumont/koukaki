@@ -10,10 +10,10 @@ function parallaxScroll() {
     // Déplacement vertical du fond vidéo
     const videoOffset = -(scrollPosition - bannerPosition) * (speed * 0.8);
     video.style.transform = `translateY(${videoOffset}px)`;  
-  }
+}
   
-  // Écouter l'événement de défilement pour activer l'effet de parallax
-  window.addEventListener('scroll', parallaxScroll);
+// Écouter l'événement de défilement pour activer l'effet de parallax
+window.addEventListener('scroll', parallaxScroll);
 
 
 
@@ -32,33 +32,3 @@ function parallaxScrollNuage() {
 
 // Écouter l'événement de défilement pour activer l'effet de parallax
 window.addEventListener('scroll', parallaxScrollNuage);
-
-
-
-
-/*
-// Fonction parallax sur fleur avec animation de rotation
-function parallaxScrollFleur() {
-  const fleurs = document.querySelectorAll('.flower');
-
-  const scrollPosition = window.scrollY;
-  const rotationSpeedSlow = 0.2; // Vitesse de rotation lente
-
-  fleurs.forEach((fleur) => {
-      const fleurPosition = fleur.offsetTop;
-
-      // Rotation de la fleur avec accélération en fonction du scroll
-      const rotationSpeed = rotationSpeedSlow + (scrollPosition - fleurPosition) * 0.001;
-
-      // Appliquer la classe de rotation en fonction de la position de défilement
-      if (scrollPosition > fleurPosition) {
-          fleur.style.animationDuration = '2s';
-      } 
-
-      fleur.style.transition = `transform ${rotationSpeed}s linear`;
-  });
-}
-
-// Écouter l'événement de défilement pour activer l'effet de parallax
-window.addEventListener('scroll', parallaxScrollFleur);
-*/

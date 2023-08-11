@@ -45,11 +45,11 @@
   top: 48px;
 }
 
-.flower {
+.flower, .rotateFlower {
   animation: $animation-rotation;
-}
-.rotateFlower {
-  animation: $animation-rotation;
+  &__menu {
+    animation: $animation-rotation;
+  }
 }
 
 .story {
@@ -91,7 +91,6 @@
     padding-bottom: 2em;
     background-color: $color__background-body;
   }
-
   #characters {
     width: 100%;
     margin: 6em 0 6em 0;
@@ -103,7 +102,6 @@
       text-align: left;
     }
   }
-  // swiper
   .swiper {
     width: 90%;
     padding-bottom: 60px;
@@ -135,7 +133,6 @@
   .slide5 {
     background-image: url("./assets/images/Jaakuna-1.png");
   }
-
   #place {
     display: flex;
     justify-content: space-around;
@@ -169,7 +166,6 @@
     }
   }
 }
-
 
 #studio {
   position: relative;
@@ -304,5 +300,4 @@
       }
     }
   }
-
 }
