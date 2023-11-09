@@ -172,3 +172,22 @@ nav.active ul {
 		}
 	}
 }
+
+@media all and (max-width: #{$breakpoint__large_phone}) {
+	.main-navigation .site-title {
+		top: 10px;
+		width: 80%;
+	}
+	.banner {
+		min-height: 600px;
+	}
+	.story h3 {
+		font-size: 25px;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+	.oscars img {
+		width: 100%;
+	}
+}

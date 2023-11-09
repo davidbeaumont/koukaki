@@ -1293,6 +1293,24 @@ nav.active ul {
     font-size: 24px;
   }
 }
+@media all and (max-width: 700px) {
+  .main-navigation .site-title {
+    top: 10px;
+    width: 80%;
+  }
+  .banner {
+    min-height: 600px;
+  }
+  .story h3 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .oscars img {
+    width: 100%;
+  }
+}
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
